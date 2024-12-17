@@ -1,18 +1,12 @@
 import './App.css'
-
-function Card(props) {
-
-
+function Card(props){
   return (
     <>
     <div id="card-container">
    {props.users.map((user,index)=>
-      <div id="card" >
-        <h3>Name:{user.name}</h3>
-        <p>Course:{user.course}</p>
-        <p>Semester:{user.sem}</p>
-        <p>Year:{user.year}</p>
-        <p>CGPA:{user.cgpa}</p>
+      <div id="card" key={index}>
+        <img src={user.img}/>
+        <h3>{user.name}</h3>
       </div>
     )}
     </div>

@@ -1,15 +1,13 @@
 import { useState } from 'react'
 import './App.css'
 import Card from './card.jsx'
-
 function App() {
-  let users=[{name:'Priyanka',course:'Bsc(CS)',year:'3',sem:'6',cgpa:'8'},
-    {name:'Nandani',course:'Bsc(CS)',year:'3',sem:'6',cgpa:'8.5'},
-    {name:'Arti',course:'B.A',year:'2',sem:'4',cgpa:'7'},
-    {name:'Kajal',course:'B.A',year:'3',sem:'6',cgpa:'7.5'},
-    {name:'Akshay',course:'B.tech',year:'3',sem:'5',cgpa:'8'},
-    {name:'Monu',course:'B.tech',year:'3',sem:'5',cgpa:'7.7'},
- 
+  let users=[{name:'Daisy',img:"image/1.jpg"},
+    {name:'Lotus',img:"image/2.jpg"},
+    {name:'Daisy',img:"image/3.jpg"},
+    {name:'Lotus',img:"image/4.jpg"},
+    {name:'Rose',img:"image/5.jpg"},
+    {name:'Rose',img:"image/7.jpg"}
   ];
   return (
     <>

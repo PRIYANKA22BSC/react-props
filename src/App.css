@@ -1,23 +1,40 @@
-/* card.jsx css start */
-#card-container{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Creates 3 equal-width columns */
-  gap: 20px; /* Adds spacing between cards */
-  padding: 20px;
-  margin-right: 5vw;
-  height: 70vh;
-  width: 100%;
+html{
+  overflow-x: hidden;
+}
 
+
+body{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+#card-container{
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr  1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+ margin:0vh 20vw 0vh 30vw;
+  height: 100vh;
+  width:100vw;
 }
 #card{
   height:50vh;
   width:20vw;
-  background-color:cadetblue;
-  border: 1px solid black;
+  background-color:black;
+  color: aliceblue;
+  border: 5px solid transparent;
+  border-image: linear-gradient(45deg, #f06, green) 1;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
+}
+img{
+  height:50%;
+  width:50%;
 }
