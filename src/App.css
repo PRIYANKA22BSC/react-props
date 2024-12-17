@@ -1,0 +1,23 @@
+/* card.jsx css start */
+#card-container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Creates 3 equal-width columns */
+  gap: 20px; /* Adds spacing between cards */
+  padding: 20px;
+  margin-right: 5vw;
+  height: 70vh;
+  width: 100%;
+
+}
+#card{
+  height:50vh;
+  width:20vw;
+  background-color:cadetblue;
+  border: 1px solid black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
