@@ -2,18 +2,18 @@
 
 Live Demo-https://react-props-drab.vercel.app/
 
-This project demonstrates the use of React props to pass flower details from a parent component (`App.jsx`) to a child component (`Products.jsx`). The task showcases how data can flow unidirectionally in React using props.
+This project demonstrates the use of React props to pass flower details from a parent component (`App.jsx`) to a child component (`Card.jsx`). The task showcases how data can flow unidirectionally in React using props.
 
 ## Features
 
 1. **Props Usage**:
-   - Flower details are passed from the `App.jsx` component to `Products.jsx`.
-   - The `Products.jsx` component dynamically renders the flower details.
+   - Flower details are passed from the `App.jsx` component to `Card.jsx`.
+   - The `Card.jsx` component dynamically renders the flower details.
 2. **Flower Details**:
    - Each flower has a name, price, and image.
    - Details are displayed in a structured format.
 3. **Reusable Components**:
-   - `Products.jsx` is designed to accept and render any flower data passed to it.
+   - `Card.jsx` is designed to accept and render any flower data passed to it.
 
 ## Technologies Used
 
@@ -25,11 +25,11 @@ This project demonstrates the use of React props to pass flower details from a p
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/react-props-flowers.git
+   git clone https://github.com/your-username/react-props-users.git
    ```
 2. Navigate to the project directory:
    ```bash
-   cd react-props-flowers
+   cd react-props-users
    ```
 3. Install dependencies:
    ```bash
@@ -46,14 +46,14 @@ This project demonstrates the use of React props to pass flower details from a p
 ### `App.jsx`
 
 - The parent component that holds the flower data.
-- Passes the data to `Products.jsx` via props.
+- Passes the data to `Card.jsx` via props.
 
-### `Products.jsx`
+### `Card.jsx`
 
 - The child component that receives and displays the flower details.
 - Uses props to dynamically render flower information.
 
-### `components/FlowerCard.jsx`
+### `components/Card.jsx`
 
 - A reusable card component to display individual flower details.
 - Displays the flower's name, price, and image in a visually appealing format.
@@ -68,7 +68,7 @@ This project demonstrates the use of React props to pass flower details from a p
 ### Flower Data in `App.jsx`
 
 ```jsx
-const flowers = [
+const users = [
   { name: 'Rose', price: '$5', image: 'rose.jpg' },
   { name: 'Tulip', price: '$3', image: 'tulip.jpg' },
   { name: 'Lily', price: '$4', image: 'lily.jpg' }
@@ -78,16 +78,16 @@ const flowers = [
 ### Passing Props
 
 ```jsx
-<Products flowers={flowers} />
+<Card users={users} />
 ```
 
 ### Rendering in `Products.jsx`
 
 ```jsx
-const Products = ({ flowers }) => (
+const Products = ({ users }) => (
   <div>
-    {flowers.map((flower, index) => (
-      <FlowerCard key={index} {...flower} />
+    {users.map((user, index) => (
+      <Card key={index} {user.name} />
     ))}
   </div>
 );
